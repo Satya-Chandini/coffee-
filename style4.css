@@ -1,0 +1,243 @@
+/* Reset & Base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body {
+  background: #fffaf5;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Navbar styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #2b0a0a;
+  padding: 15px 30px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+.navbar .logo {
+  color: #fff;
+  font-size: 1.8em;
+  font-weight: bold;
+}
+.navbar .nav-links a {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 20px;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+.navbar .nav-links a:hover {
+  color: #f4b41a;
+}
+
+/* Hero section */
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 80px 10%;
+  background-color: #3e2723;
+  color: #fff;
+}
+.hero-content {
+  flex: 1 1 50%;
+}
+.hero-content h1 {
+  font-size: 3em;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+.hero-content h1 span {
+  color: #f4b41a;
+  font-weight: bold;
+}
+.hero-content p {
+  font-size: 1.2em;
+  margin-bottom: 30px;
+  max-width: 500px;
+}
+.hero .buttons .btn {
+  display: inline-block;
+  text-decoration: none;
+  padding: 12px 25px;
+  border-radius: 25px;
+  font-weight: 500;
+  margin-right: 15px;
+  transition: background 0.3s, color 0.3s;
+}
+.order-btn {
+  background: #f4b41a;
+  color: #000;
+}
+.order-btn:hover {
+  background: #e09e00;
+}
+.contact-btn {
+  border: 2px solid #f4b41a;
+  color: #f4b41a;
+}
+.contact-btn:hover {
+  background: #f4b41a;
+  color: #000;
+}
+.hero-image {
+  flex: 1 1 40%;
+  text-align: center;
+}
+.hero-image img {
+  width: 100%;
+  max-width: 400px;
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Float animation for hero image */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+}
+
+/* About section */
+.about {
+  padding: 80px 10%;
+  text-align: center;
+}
+.about h2 {
+  font-size: 2.5em;
+  color: #3e2723;
+  margin-bottom: 20px;
+}
+.about p {
+  font-size: 1.1em;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Menu section */
+.menu {
+  background: #2b0a0a;
+  color: #fff;
+  padding: 80px 10%;
+  text-align: center;
+}
+.menu h2 {
+  font-size: 2.5em;
+  margin-bottom: 40px;
+}
+.menu-items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+}
+.menu-item {
+  width: 200px;
+}
+.menu-item img {
+  width: 100%;
+  border-radius: 15px;
+  margin-bottom: 15px;
+}
+.menu-item h3 {
+  font-size: 1.2em;
+}
+
+/* Gallery section */
+.gallery {
+  padding: 80px 10%;
+  text-align: center;
+}
+.gallery h2 {
+  font-size: 2.5em;
+  color: #3e2723;
+  margin-bottom: 40px;
+}
+.gallery-images {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+.gallery-images img {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 15px;
+  transition: transform 0.4s;
+}
+.gallery-images img:hover {
+  transform: scale(1.05);
+}
+
+/* Contact section */
+.contact {
+  background: #3e2723;
+  color: #fff;
+  padding: 80px 10%;
+  text-align: center;
+}
+.contact h2 {
+  font-size: 2.5em;
+  margin-bottom: 30px;
+}
+.contact form {
+  max-width: 600px;
+  margin: 0 auto;
+  display: grid;
+  gap: 20px;
+}
+.contact form input,
+.contact form textarea {
+  padding: 15px;
+  border-radius: 8px;
+  border: none;
+  font-size: 1em;
+  outline: none;
+}
+.contact form textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+.contact .send-btn {
+  background: #f4b41a;
+  color: #000;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.contact .send-btn:hover {
+  background: #e09e00;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+  .hero-content, .hero-image {
+    flex: 1 1 100%;
+  }
+  .menu-items, .gallery-images {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .navbar .nav-links a {
+    margin-left: 15px;
+    font-size: 0.95em;
+  }
+}
+
